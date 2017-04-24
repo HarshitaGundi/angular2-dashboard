@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/csu-report/csu-report.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/app/csu-report</a> csu-report.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.6% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>30/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>27/48</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../_services/student.service';
+import { Router, ActivatedRoute } from '@angular/router';
+&nbsp;
+&nbsp;
+@Component( {
+    selector: 'app-csu-report',
+    templateUrl: './csu-report.component.html',
+    styleUrls: [ './csu-report.component.scss' ]
+} )
+export class CSUReportComponent implements OnInit {
+&nbsp;
+    private data;
+    private sectionId;
+    private students = [];
+    private chartOptions;
+&nbsp;
+    /** Data for Header Component **/
+    private chartTitle: string = "Attrition Risk Analysis";
+    private courseName: string = "";
+    private weekInfo: string = "";
+&nbsp;
+    /** Filter Component Options **/
+    private filterMap = {
+        low: true, medium: true, high: true
+    };
+&nbsp;
+    /** Sorting Component Options **/
+    private sortByModel = 'score';
+    private sortByOptions = [
+        { title: 'Risk Score', model: 'score' },
+        { title: 'Student Name', model: 'name' }
+    ];
+&nbsp;
+    /** Flags and Defaults **/
+    private dataLoaded = false;
+    private isError = false;
+    private error = { };
+&nbsp;
+    constructor( private studentService: StudentService, private route: ActivatedRoute ) {
+&nbsp;
+    }
+&nbsp;
+    ngOnInit() {
+&nbsp;
+        // Get sectionId from route
+        this.route.params.flatMap( params =&gt; {
+            console.log( params );
+&nbsp;
+            // Get Section Id
+            let sectionId = params[ 'sectionId' ];
+            this.sectionId = sectionId;
+&nbsp;
+            //  Get Student Data
+            return this.studentService.getStudentsData( sectionId );
+&nbsp;
+        } ).subscribe( <span class="fstat-no" title="function not covered" ></span>data =&gt; {
+&nbsp;
+            // Setup data for chart and table
+<span class="cstat-no" title="statement not covered" >          console.log("DATA", data);</span>
+&nbsp;
+            // Count students by risk category
+            let counts = <span class="cstat-no" title="statement not covered" >{ high: 0, medium: 0, low: 0 };</span>
+<span class="cstat-no" title="statement not covered" >            data.students.forEach( <span class="fstat-no" title="function not covered" ></span>student =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                counts[ student.category ]++;</span>
+            } );
+&nbsp;
+            // Add Metrics to Chart Options
+            // Chart Options
+            let chartOptions = <span class="cstat-no" title="statement not covered" >{</span>
+                credits: false,
+                title: { text: null },
+                chart: { type: 'column', height: 250 },
+                xAxis: {
+                    tickPosition: 'inside',
+                    tickLength: 5,
+                    tickColor: "#3f3f3f",
+                    lineColor: "#3f3f3f",
+                    type: 'category',
+                    labels: {
+                        style: { fontWeight: 'bold' },
+                    },
+                    categories: [
+                        'High Risk',
+                        'Medium Risk',
+                        'Low Risk'
+                    ]
+                },
+                yAxis: {
+                    gridLineWidth: 0,
+                    minorGridLineWidth: 0,
+                    tickPosition: 'inside',
+                    maxPadding: 0,
+                    endOnTick: true,
+                    tickWidth: 1,
+                    tickColor: "#3f3f3f",
+                    lineColor: "#3f3f3f",
+                    lineWidth: 1,
+                    title: { text: 'Number of Students' }
+                },
+                tooltip: {
+                    formatter: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                        return 'Students: &lt;b&gt;' + this.y + '&lt;/b&gt;';</span>
+                    }
+                },
+                series: [ {
+                    showInLegend: false,
+                    data: [
+                        { y: counts.high, color: '#F45656' },
+                        { y: counts.medium, color: '#EEE140' },
+                        { y: counts.low, color: '#AFC917' }
+                    ]
+                } ]
+            };
+&nbsp;
+            // Extract Course and Week Information
+<span class="cstat-no" title="statement not covered" >            this.courseName = data.metadata.course + ", " + data.metadata.section;</span>
+<span class="cstat-no" title="statement not covered" >            this.weekInfo = "Predictions last updated on " + data.metadata.date;</span>
+&nbsp;
+            // Add Student Data and Options to the Scope
+<span class="cstat-no" title="statement not covered" >            this.data = data;</span>
+<span class="cstat-no" title="statement not covered" >            this.students = data.students.slice();</span>
+<span class="cstat-no" title="statement not covered" >            this.chartOptions = chartOptions;</span>
+&nbsp;
+            // Default SortBy
+<span class="cstat-no" title="statement not covered" >            this.sortBy( this.sortByModel );</span>
+&nbsp;
+            // Data Loaded
+<span class="cstat-no" title="statement not covered" >            this.dataLoaded = true;</span>
+&nbsp;
+        }, err =&gt; {
+              this.isError = true;
+              this.error = err;
+          }
+        );
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    sortBy( </span>model ) {
+&nbsp;
+        // Keep track of updated sortByModel
+<span class="cstat-no" title="statement not covered" >        this.sortByModel = model;</span>
+&nbsp;
+        // Sort
+<span class="cstat-no" title="statement not covered" >        this.students.sort( <span class="fstat-no" title="function not covered" >( </span>a, b ) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            if ( model === 'score' ) {</span>
+<span class="cstat-no" title="statement not covered" >                return a[ model ] &lt; b[ model ] ? 1 : -1;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                return a[ model ].toLowerCase() &gt; b[ model ].toLowerCase() ? 1 : -1;</span>
+            }
+        } );
+&nbsp;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    toggleFilterCategory( </span>target ) {</span>
+&nbsp;
+        // Keep Track of Checked Values
+<span class="cstat-no" title="statement not covered" >        this.filterMap[ target.value ] = target.checked;</span>
+&nbsp;
+        // Filter Students from Original Dataset
+<span class="cstat-no" title="statement not covered" >        this.students = this.data.students.filter( <span class="fstat-no" title="function not covered" ></span>student =&gt; <span class="cstat-no" title="statement not covered" >this.filterMap[ student.category ] </span>);</span>
+&nbsp;
+        // Sort by latest sortModel selected
+<span class="cstat-no" title="statement not covered" >        this.sortBy( this.sortByModel );</span>
+&nbsp;
+    }
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Mar 13 2017 23:24:49 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

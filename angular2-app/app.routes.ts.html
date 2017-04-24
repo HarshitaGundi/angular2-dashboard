@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/app.routes.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/app</a> app.routes.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { RouterModule, Routes } from '@angular/router';
+import { CSUReportComponent } from './pages-prototypes/csu-report/csu-report.component';
+import { AuthGuard } from './_guards/AuthGuard';
+import { PrototypesComponent } from './pages-prototypes/prototypes/prototypes.component';
+import { LoginComponent } from './login/login.component';
+import { CSUSectionComponent }  from './pages-prototypes/csu-section/csu-section.component';
+import { ResearchComponent }  from './pages-research/research/research.component'
+import { ResearchListComponent } from './pages-research/research-list/research-list.component';
+import { ResearchContentComponent } from './pages-research/research-content/research-content.component';
+&nbsp;
+const appRoutes: Routes = [
+&nbsp;
+    // Default path is a Login Page
+    { path: '', component: LoginComponent },
+&nbsp;
+    // Login Page
+    { path: 'login', component: LoginComponent },
+&nbsp;
+    // Prototype Area
+    { path: 'proto', component: PrototypesComponent, canActivate: [ AuthGuard ] },
+    { path: 'proto/csu/section', component: CSUSectionComponent, canActivate: [ AuthGuard ] },
+    { path: 'proto/csu/section/:sectionId', component: CSUReportComponent, canActivate: [ AuthGuard ] },
+&nbsp;
+    // Research Area
+    { path: 'research', component: ResearchComponent, canActivate: [ AuthGuard ] },
+    { path: 'research/:tileId', component: ResearchListComponent, canActivate: [ AuthGuard ] },
+    { path: 'research/:tileId/:contentId', component: ResearchContentComponent, canActivate: [ AuthGuard ] },
+&nbsp;
+    // Since we have updated the routerLink from /home to /proto
+    // Make /home redirect to /proto just in case anybody has it bookmarked
+    { path: 'home', redirectTo: 'proto' },
+&nbsp;
+    // All rest of the paths should redirect to login
+    { path: '**', redirectTo: 'login' }
+&nbsp;
+];
+&nbsp;
+export const routes = RouterModule.forRoot( appRoutes );
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Mar 27 2017 16:23:54 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
